@@ -11,10 +11,13 @@
           <div class="card-content">
             <p>{{ pokemon.name }}</p>
             <p><small>{{ pokemon.created | date:'dd/mm/yyy hh:mm' | uppercase }}</small></p>
+            <span *ngFor="let type of pokemon.types" class ="{{type | pokemonTypeColor}}">
+              <p>{{ type }}</p>
+            </span>
+
           </div>
         </div>
       </div>
-      <span *ngFor="let type of pokemon.types" class ="{{type | pokemonTypeColor}}"> </span>
     </div>
   </div>
 </div>
